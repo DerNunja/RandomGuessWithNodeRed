@@ -1,0 +1,366 @@
+[
+    {
+        "id": "c6f7de9353582de1",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "74fddf0e9298beb9",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "302e3287f635dd2e",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "53322e71394a01b8",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "74fddf0e9298beb9",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "302e3287f635dd2e",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "b4e4776019c59a5c",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "53322e71394a01b8",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default"
+    },
+    {
+        "id": "6d15faa58dad3c77",
+        "type": "debug",
+        "z": "c6f7de9353582de1",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "160298718047de29",
+        "type": "http request",
+        "z": "c6f7de9353582de1",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 650,
+        "y": 200,
+        "wires": [
+            [
+                "0895657740a58fa6",
+                "335dc779a27554a2"
+            ]
+        ]
+    },
+    {
+        "id": "3a57714b03b3c8b6",
+        "type": "ui-number-input",
+        "z": "c6f7de9353582de1",
+        "group": "b4e4776019c59a5c",
+        "name": "",
+        "label": "number",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "tooltip": "",
+        "passthru": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "spinner": "default",
+        "x": 260,
+        "y": 60,
+        "wires": [
+            [
+                "3977c38619a6a35e"
+            ]
+        ]
+    },
+    {
+        "id": "687d773015680a66",
+        "type": "ui-button",
+        "z": "c6f7de9353582de1",
+        "group": "b4e4776019c59a5c",
+        "name": "",
+        "label": "button",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "buildPostBody"
+            ]
+        ]
+    },
+    {
+        "id": "2e5283f938d52698",
+        "type": "ui-text",
+        "z": "c6f7de9353582de1",
+        "group": "b4e4776019c59a5c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "",
+        "valueType": "msg",
+        "x": 1050,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3977c38619a6a35e",
+        "type": "function",
+        "z": "c6f7de9353582de1",
+        "name": "toNumber",
+        "func": "let num = +msg.payload;\n\nmsg.payload = num;\n\nflow.set(\"number\", num);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 60,
+        "wires": [
+            [
+                "6d15faa58dad3c77"
+            ]
+        ]
+    },
+    {
+        "id": "buildPostBody",
+        "type": "function",
+        "z": "c6f7de9353582de1",
+        "name": "buildUrl",
+        "func": "const raw = flow.get(\"number\");\nconst g = Number.parseInt(raw, 10);\n\nif (!Number.isInteger(g) || g < 1 || g > 100) {\n  msg.payload = \"Bitte erst eine gültige Zahl (1..100) eingeben\";\n  return [null, msg]; // nur Hinweis an Ausgang 2\n}\n\nmsg.method = \"GET\";\nmsg.url = `http://localhost:8000/game/${g}`;\nreturn [msg, null];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 240,
+        "wires": [
+            [
+                "160298718047de29",
+                "fa0ae95d4ec32960"
+            ],
+            [
+                "2e5283f938d52698",
+                "75b67313b0c29603"
+            ]
+        ]
+    },
+    {
+        "id": "0895657740a58fa6",
+        "type": "function",
+        "z": "c6f7de9353582de1",
+        "name": "formatUi",
+        "func": "if (msg._uiOnly) { msg.payload = String(msg.payload); return msg; }\n\nconst p = msg.payload || {};\nlet text = \"\";\n\nif (p.error) text = `Fehler: ${p.error}`;\nelse if (p.result === \"low\") text = \"Zu niedrig\";\nelse if (p.result === \"high\") text = \"Zu hoch\";\nelse if (p.result === \"correct\") {\n  text = p.message || \"Richtig! Neue Zahl gesetzt.\";\n  if (typeof p.attempts === \"number\") text += ` (Versuche: ${p.attempts})`;\n} else {\n  text = typeof p === \"string\" ? p : JSON.stringify(p);\n}\n\nmsg.payload = text;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 200,
+        "wires": [
+            [
+                "2e5283f938d52698",
+                "2e4a00e5576685e2"
+            ]
+        ]
+    },
+    {
+        "id": "75b67313b0c29603",
+        "type": "debug",
+        "z": "c6f7de9353582de1",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "fa0ae95d4ec32960",
+        "type": "debug",
+        "z": "c6f7de9353582de1",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "335dc779a27554a2",
+        "type": "debug",
+        "z": "c6f7de9353582de1",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "2e4a00e5576685e2",
+        "type": "debug",
+        "z": "c6f7de9353582de1",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 140,
+        "wires": []
+    }
+]
