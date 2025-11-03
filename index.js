@@ -5,6 +5,7 @@ app.use(express.json());
 // Geheime Zahl (1..100) im Speicher halten
 let secret = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
+console.log(secret);
 
 function resetSecret() {
   secret = Math.floor(Math.random() * 100) + 1;
