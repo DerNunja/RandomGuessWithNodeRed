@@ -11,5 +11,13 @@
   "dependencies": {
     "express": "^5.1.0",
     "fs": "^0.0.1-security"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DerNunja/RandomGuessWithNodeRed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DerNunja/RandomGuessWithNodeRed/issues"
+  },
+  "homepage": "https://github.com/DerNunja/RandomGuessWithNodeRed#readme"
 }
